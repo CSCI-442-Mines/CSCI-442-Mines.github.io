@@ -59,7 +59,7 @@ export default defineConfig({
     aside: true,
     editLink: {
       pattern:
-        "https://github.com/csci-442-mines/csci-442-mines.github.io/edit/main/docs/src/:path",
+        "https://github.com/csci-442-mines/csci-442-mines.github.io/edit/main/src/:path",
     },
     footer: {
       copyright: "&copy; 2025 Colorado School of Mines",
