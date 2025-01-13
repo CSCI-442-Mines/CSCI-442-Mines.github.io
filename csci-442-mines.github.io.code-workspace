@@ -1,0 +1,42 @@
+{
+  "extensions": {
+    "recommendations": [
+      "EditorConfig.EditorConfig",
+      "Vue.volar",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
+  },
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "source.organizeImports": "always"
+    },
+    "vue.server.includeLanguages": [
+      "vue",
+      "markdown"
+    ],
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }
+}

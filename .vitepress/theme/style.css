@@ -1,0 +1,43 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Lists
+ * -------------------------------------------------------------------------- */
+.vp-doc li > ol,
+.vp-doc li > ul {
+  margin: 8px 0 0 8px;
+}
+
+/**
+ * Full width
+ * See https://github.com/vuejs/vitepress/discussions/1646#discussioncomment-11486171
+ * -------------------------------------------------------------------------- */
+:root {
+  --vp-layout-max-width: 100%;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+  max-width: 1024px !important;
+}
+
+.VPDoc:not(.has-sidebar) .content {
+  max-width: 1024px !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 1024px !important;
+}
+
+/**
+ * Print mode
+ * -------------------------------------------------------------------------- */
+@media print {
+  .VPNav,
+  .VPLocalNav,
+  .VPDocFooter {
+    display: none !important;
+  }
+}
