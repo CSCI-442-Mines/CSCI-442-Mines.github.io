@@ -110,9 +110,10 @@ The structure of your dev container at the **end of this course** will look like
   **Any data outside of this directory will not be saved when the container is stopped.**
   - `.devcontainer/`: This directory contains the configuration for the dev container itself. Do not
     modify this directory.
-  - `utils/`: This directory contains miscellaneous utilities for the course. A course staff member
+  - `scripts/`: This directory contains miscellaneous scripts for the course. A course staff member
     will provide instructions on how to use these utilities, if necessary.
-  - `README.md`: This file contains helpful reminders and instructions for using the dev container.
+  - `README.md`: This is the file you are currently reading. This file contains helpful reminders
+    and instructions for using the dev container.
   - `SEMESTER-project-1-USERNAME/`: This is your personal project 1 repository, where `SEMESTER` is
     the current semester (e.g.: `sp25`) and `USERNAME` is your GitHub username (e.g.: `ghost`). It
     will be created for you when you accept the GitHub Classroom assignment for project 1
