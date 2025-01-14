@@ -129,11 +129,12 @@ accidental deletion). Then, open the top level of extracted directory in VS Code
 the following methods:
 
 1. (Recommended) Open VS Code and select `File > Open Folder...`: ![Open folder dropdown](./student-environment/vscode-open-folder-dropdown.png)
-   Then, navigate to the directory where you extracted the course dev container.
-2. Right-click on the directory and select `Open with Code` (This may not be available on all
-   systems).
+   Then, navigate to the directory where you extracted the course dev container. You should see VS
+   Code switch to the directory you selected.
+2. Right-click on the directory and select `Open with Code`. You should see VS Code open with the
+   directory loaded in the window. Note that this option may not be available on all systems.
 3. Run `code PATH_TO_DIRECTORY` in your system's terminal (Where `PATH_TO_DIRECTORY` is the actual
-   path to the directory).
+   path to the directory). You should see VS Code open with the directory loaded in the window.
 
 Now that you have the directory open in VS Code, you should see a popup notification, typically on
 the bottom right of the window, that says `Reopen in Container`:
@@ -282,6 +283,37 @@ debugging. You can find more information on how to use the workspace file in the
 `README.md` file.
 
 ## Common Issues
+
+### VS Code Takes a Very Long Time to Build the Dev Container
+
+- Symptom: building the dev container takes a very long time (e.g.: 20+ minutes).
+- Solution: this can happen if you have a slow internet connection or computer. To workaround this,
+  we provide a pre-built dev container image (`ghcr.io/csci-442-mines/student-env`). To use it, edit
+  the `.devcontainer/devcontainer.json` like so:
+
+  ```diff
+  // Use the prebuilt image (Mutually exclusive with "build"!):
+  - // "image": "ghcr.io/csci-442-mines/student-env:latest",
+  + "image": "ghcr.io/csci-442-mines/student-env:latest",
+
+  // Build the image yourself (Mutually exclusive with "image"!):
+  - "build": {
+  -   "dockerfile": "Dockerfile",
+  -   "context": ".."
+  - },
+  + // "build": {
+  + //   "dockerfile": "Dockerfile",
+  + //   "context": ".."
+  + // },
+  ```
+
+  _Note: the `+` and `-` symbols are non-literal and are used to indicate lines that should be added
+  and removed, respectively. If you don't already have an `image` line, you can just add the `image`
+  line like above and comment out the `build` section._
+
+  Then, rebuild the dev container by clicking on the green `Reopen in Container` button in the
+  bottom right corner of the window or by opening the command palette (`CTRL+SHIFT+P` or
+  `CMD+SHIFT+P` on Mac) and typing `Dev Containers: Rebuild Container`.
 
 ### Cloning Using HTTPS Instead of SSH
 
