@@ -253,7 +253,7 @@ Where `PERSONAL_PROJECT_REPOSITORY_URL` is the URL of your personal project repo
 going to the GitHub Classroom assignment page, opening your repository, and clicking on the green
 `Code` button, and selecting the appropriate protocol.
 
-Once the repository is cloned, open the project-specific `.code-workspace` file (e.g.:
+Once the repository is cloned, open the project-specific `*.code-workspace` file (e.g.:
 `project-1.code-workspace`) by clicking on it in the file explorer. You should see a popup
 notification, typically on the bottom right of the window, that says `Open Workspace`:
 
@@ -278,9 +278,9 @@ icon with a down arrow to install all recommended extensions:
 ![Extensions sidebar with recommended extensions](./student-environment/vscode-recommended-extensions-sidebar.png)
 
 Once the extensions are installed, you can now start working on your project! Note that the
-`.code-workspace` file we provide is pre-configured with everything you need for one-click building/
-debugging. You can find more information on how to use the workspace file in the each project's
-`README.md` file.
+`*.code-workspace` file (e.g.: `project-1.code-workspace`) we provide is pre-configured with
+everything you need for one-click building/debugging. You can find more information on how to use
+the workspace file in the each project's `README.md` file.
 
 ## Common Issues
 
@@ -344,8 +344,21 @@ and the repository exists.
   make sure you set up your SSH key correctly by following the instructions in the [Setup Git Inside
   the Dev Container](#setup-git-inside-the-dev-container) section.
 
-### Can't Find The Project-Specific `.code-workspace` File
+### Can't Find The Project-Specific `*.code-workspace` File (e.g.:
 
-- Symptom: you can't find the project-specific `.code-workspace` file in VS Code's file explorer.
+`project-1.code-workspace`)
+
+- Symptom: you can't find the project-specific `*.code-workspace` file (e.g.:
+  `project-1.code-workspace`) in VS Code's file explorer.
 - Solution: make sure you have opened the top level of the workspace directory in the dev container
   (See the [Per-Project Setup](#per-project-setup) section for more details).
+
+### Missing Debug Configurations/Tools
+
+- Symptom: the VS Code debug configurations and/or build/debug tools (e.g.: `clang`,
+  `cmake`, `gcc`, `g++`, `make`, etc.) are missing.
+- Solution: double check you have opened the course dev container **first**, and then opened the
+  project-specific `*.code-workspace` file (e.g.: `project-1.code-workspace`) **second**. If you
+  open the project-specific `*.code-workspace` file (e.g.: `project-1.code-workspace`) without
+  first opening the course dev container (or in different dev container), the debug configurations
+  and/or tools will be missing.
