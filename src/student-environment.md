@@ -31,8 +31,8 @@ system below:
   - We recommend using the WSL 2 backend for Docker Desktop on Windows.
 - **Mac**: [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
 - **Linux**: [Docker Engine for Linux](https://docs.docker.com/engine/install/)
-  - We do not recommend using Docker Desktop on Linux because it may run with an additional
-    virtualization layer, making troubleshooting more difficult.
+  - We strongly **do not recommend** using the Docker snap package nor the Docker Desktop
+    application on Linux.
   - Make sure to also complete the [post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/).
 
 ::: warning
