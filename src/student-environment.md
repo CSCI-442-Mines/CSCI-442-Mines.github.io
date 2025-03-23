@@ -284,12 +284,14 @@ the workspace file in the each project's `README.md` file.
 
 ## Common Issues
 
-### VS Code Takes a Very Long Time to Build the Dev Container
+### VS Code Takes a Very Long Time to Build the Dev Container/Fails to Build the Dev Container
 
-- Symptom: building the dev container takes a very long time (e.g.: 20+ minutes).
-- Solution: this can happen if you have a slow internet connection or computer. To workaround this,
-  we provide a pre-built dev container image (`ghcr.io/csci-442-mines/student-env`). To use it, edit
-  the `.devcontainer/devcontainer.json` like so:
+- Symptom: building the dev container takes a very long time (e.g.: 20+ minutes) or VS Code fails to
+  build the dev container with an error message related to Docker.
+- Solution: this can happen if you have a slow/dysfunctional internet connection or computer. To
+  workaround this, we provide a pre-built dev container image
+  (`ghcr.io/csci-442-mines/student-env`). To use it, edit the `.devcontainer/devcontainer.json` like
+  so:
 
   ```diff
   // Use the prebuilt image (Mutually exclusive with "build"!):
